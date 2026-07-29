@@ -226,6 +226,9 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 @media(max-width:680px){.stack-cols{grid-template-columns:1fr}}
 .assetcol{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
 .assetcol .cap{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px}
+.re-photo{position:relative;border-bottom:1px solid var(--line)}
+.re-photo img{width:100%;display:block;aspect-ratio:978/652;object-fit:cover}
+.re-photo-cap{position:absolute;left:0;right:0;bottom:0;padding:26px 18px 12px;font-size:.78rem;line-height:1.35;color:#fff;background:linear-gradient(0deg,rgba(20,15,10,.82),rgba(20,15,10,0));font-weight:500}
 .assetcol .cap .tk{width:10px;height:26px;border-radius:2px}
 .assetcol.biz .cap .tk{background:var(--biz)} .assetcol.re .cap .tk{background:var(--re)}
 .assetcol .cap h4{font-size:1.1rem} .assetcol .cap .amt{margin-left:auto;font-family:"Fraunces";font-size:1.5rem;font-weight:600}
@@ -439,6 +442,9 @@ svg text{font-family:"JetBrains Mono",monospace;fill:var(--tx-3)}
     </div>
     <div class="stack-cols">
       <div class="assetcol re">
+        <div class="re-photo"><img src="assets/building.png" alt="Elvira's Cafe — the building and land, Wears Valley, TN" loading="lazy">
+          <span class="re-photo-cap">The building &amp; land included in the sale — barn-built with a full wraparound porch, on Wears Valley Rd.</span>
+        </div>
         <div class="cap"><span class="tk"></span><h4>Real Estate</h4><span class="amt">$2.1M</span></div>
         <div class="body">
           <div id="reTable"></div>
