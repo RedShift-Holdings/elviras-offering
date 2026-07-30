@@ -245,7 +245,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .upcard .drow{padding:9px 0}
 .upcard .drow.step .lbl{color:var(--tx-3);font-size:.84rem}
 .upcard .drow.res .lbl{color:var(--tx);font-weight:600}
-.comps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0 18px}
+.comps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:22px 0 18px}
 @media(max-width:720px){.comps{grid-template-columns:1fr}}
 .comp{border:1px solid var(--line);border-radius:6px;padding:16px 16px 14px;background:var(--surface-2);position:relative}
 .comp.subj{border-color:var(--re);box-shadow:0 0 0 1px var(--re) inset}
@@ -370,7 +370,7 @@ svg text{font-family:"JetBrains Mono",monospace;fill:var(--tx-3)}
     <div class="sec-head">
       <div class="eyebrow"><span class="idx">02 —</span> Trading Performance</div>
       <h2>Steady revenue, and prime cost brought back into line.</h2>
-      <p class="lead">Three years of stable revenue around $1.3–1.4M — returning to growth in 2025 (+5.9%) — while food and labor, the two costs that make or break a restaurant, were pulled from a <em>73% prime cost in 2023 down to roughly 65% today</em>.</p>
+      <p class="lead">Three years of stable revenue around $1.3–1.4M — returning to growth in 2025 (+5.9%) — while food and labor, the two costs that make or break a restaurant, were pulled from 73% of revenue in 2023 to ~65% on the books. Strip out the <em>$130K of owner salary and consulting fees carried in the labor line</em>, and true operating prime cost is roughly <em>55%</em>.</p>
     </div>
     <div class="grid-3-2">
       <div class="panel">
@@ -384,9 +384,9 @@ svg text{font-family:"JetBrains Mono",monospace;fill:var(--tx-3)}
       </div>
       <div class="panel ink">
         <h3>Prime cost discipline</h3>
-        <div class="ph-sub">2025 · food + labor as a share of revenue</div>
+        <div class="ph-sub">2025 · food + labor as a share of revenue · net of owner add-backs</div>
         <div id="primeChart"></div>
-        <p class="card-note" style="color:var(--tx-on-dark-2);margin-top:18px">Full-service restaurants target a prime cost under <b style="color:#fff">65%</b>. Elvira's now sits right at the line — <b style="color:#fff">down from 73% in 2023</b>, a real cost turnaround with the remaining upside still in labor scheduling.</p>
+        <p class="card-note" style="color:var(--tx-on-dark-2);margin-top:18px">Full-service restaurants target a prime cost under <b style="color:#fff">65%</b>. Net of the $130K of owner salary and consulting fees carried in the labor line (added back in the Normalization), Elvira's true prime cost is <b style="color:#fff">~55%</b> — down from 73% as reported in 2023, and comfortably below the industry line.</p>
       </div>
     </div>
     <div class="momentum">
@@ -405,7 +405,7 @@ svg text{font-family:"JetBrains Mono",monospace;fill:var(--tx-3)}
     <div class="sec-head">
       <div class="eyebrow"><span class="idx">03 —</span> The CFO Normalization</div>
       <h2>From reported profit to <em>true owner earnings.</em></h2>
-      <p class="lead">A buyer isn't purchasing last year's tax figure — they're buying the total benefit an owner-operator takes from the business. Starting from real 2025 net profit, we add back owner compensation and the discretionary and non-cash items a buyer's CFO would, to reach SDE.</p>
+      <p class="lead">A buyer isn't purchasing last year's tax figure — they're buying the total benefit an owner-operator takes from the business. Starting from real 2025 net profit, we add back the owner's salary and the consulting fees and optional services carried in the books, to reach SDE.</p>
     </div>
     <div class="grid-3-2">
       <div class="panel">
@@ -420,7 +420,7 @@ svg text{font-family:"JetBrains Mono",monospace;fill:var(--tx-3)}
         <p class="footnote">SDE = Seller's Discretionary Earnings: the total pre-tax benefit to a single owner-operator, the standard basis for pricing an owner-run restaurant.</p>
       </div>
     </div>
-    <div class="callout" style="margin-top:30px">Revenue, COGS, and labor are <b>actual 2025 figures</b> from management accounts. The add-back amounts are <b>estimates</b> pending the owner's detailed books (owner salary, benefits, depreciation, and one-time costs) — the method is standard; the exact figures finalize in diligence.</div>
+    <div class="callout" style="margin-top:30px">Revenue, COGS, and labor are <b>actual 2025 figures</b> from management accounts. The add-backs are the owner's actual <b>$80K salary</b> and <b>$50K of consulting fees &amp; optional services</b>, both carried in the labor line of the books — documented and verifiable in diligence.</div>
   </section>
 
   <!-- photo band -->
@@ -449,14 +449,14 @@ svg text{font-family:"JetBrains Mono",monospace;fill:var(--tx-3)}
         <div class="cap"><span class="tk"></span><h4>Real Estate</h4><span class="amt">$2.1M</span></div>
         <div class="body">
           <div id="reTable"></div>
-          <p class="method" style="margin-top:16px"><b>Income approach.</b> Market rent for the restaurant plus the on-site rental &amp; storage units produces stabilized net operating income, capitalized at a market rate for Sevier County commercial property.</p>
+          <p class="method" style="margin-top:16px"><b>Income approach.</b> Market rent for the restaurant plus the upstairs office &amp; apartment produces stabilized net operating income, capitalized at a market rate for Sevier County commercial property — with the sales-comparison approach below as the second read.</p>
         </div>
       </div>
       <div class="assetcol biz">
         <div class="cap"><span class="tk"></span><h4>Business</h4><span class="amt">$1.0M</span></div>
         <div class="body">
           <div id="bizTable"></div>
-          <p class="method" style="margin-top:16px"><b>Earnings multiple.</b> Priced on adjusted SDE. At trailing earnings the multiple is conservative for a branded, turnkey operation — and on the pro-forma below, it falls to roughly <b>2×</b>.</p>
+          <p class="method" style="margin-top:16px"><b>Earnings multiple.</b> Priced on adjusted SDE, squarely inside the standard 2.5–3.5× range for a branded, turnkey operation — and on the pro-forma below, the multiple falls to roughly <b>2×</b>.</p>
         </div>
       </div>
     </div>
@@ -466,13 +466,13 @@ svg text{font-family:"JetBrains Mono",monospace;fill:var(--tx-3)}
       <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px">
         <div>
           <h3>Market evidence — Wears Valley Rd corridor</h3>
-          <div class="ph-sub" style="margin-bottom:0">Active commercial listings, a second read on the real estate value (sales-comparison approach)</div>
+          <div class="ph-sub" style="margin-bottom:0">Active commercial listings only — residential inventory excluded (sales-comparison approach)</div>
         </div>
         <div style="text-align:right"><div class="k" style="font-family:'JetBrains Mono';font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tx-3)">Concluded corridor rate</div><div style="font-family:Fraunces;font-size:1.7rem;font-weight:600;color:var(--re-ink)" id="ppsfHead">$—/sf</div></div>
       </div>
       <div class="comps" id="compsGrid"></div>
       <div class="recon" id="reconRow"></div>
-      <p class="footnote">Comps are active asking prices on the Wears Valley Rd / Hwy 321 corridor (mid-2026), used as market indication, not a certified appraisal. Sevier County land benchmark ≈ $85K/acre (Land Network). Elvira's building area is an assumption pending confirmation.</p>
+      <p class="footnote">Comps are active <b>commercial</b> asking prices on the Wears Valley Rd / Hwy 321 corridor (mid-2026) — residential listings excluded — used as market indication, not a certified appraisal. The 1134–1138 listing's rate reflects substantial acreage and is shown as context only. Sevier County land benchmark ≈ $85K/acre (Land Network). Elvira's site is 1.39 acres; building area is an assumption pending confirmation.</p>
     </div>
   </section>
 
@@ -599,48 +599,50 @@ svg text{font-family:"JetBrains Mono",monospace;fill:var(--tx-3)}
    ===================================================================== */
 const DATA = {
   meta:{ business:"Elvira's Cafe", location:"Wears Valley, TN", prepared:"July 2026",
-         status:"REAL 2023–2025 actuals (dashboard.krugliy.com); SDE add-backs estimated", accessCodeSha256:null },
+         status:"REAL 2023–2025 actuals (dashboard.krugliy.com); add-backs per owner ($80K salary + $50K consulting)", accessCodeSha256:null },
   // REAL calendar-year actuals — dashboard.krugliy.com, pulled 2026-07-29. 'net' = reported net profit.
   years:[
     { year:2023, revenue:1405485, net:216512 },
     { year:2024, revenue:1293712, net:247642 },
     { year:2025, revenue:1369468, net:198771 }
   ],
-  // 2025 real P&L. labor INCLUDES employer burden ($89,864) so prime cost = COGS + labor = 64.9% (matches books).
-  pnl2025:{ revenue:1369468, cogs:396348, labor:492638, otherOpex:281712, marketRent:120000 },
+  // 2025 real P&L. labor INCLUDES employer burden ($89,864) → as-reported prime = 64.9% (matches books).
+  // laborAddbacks = owner salary $80K + consulting fees & optional services $50K, carried in the labor line (per Glenn 2026-07-30).
+  pnl2025:{ revenue:1369468, cogs:396348, labor:492638, laborAddbacks:130000, otherOpex:281712, marketRent:120000 },
   bridge:{
     reportedNet:198771,   // REAL 2025 net profit
-    // ⚠ Add-backs ESTIMATED pending owner's books (owner comp, "Else" breakdown, D&A, one-time)
+    // Add-backs per owner (2026-07-30) — both carried in the labor line of the books
     steps:[
-      { label:"Owner compensation (add back)", val:70000, type:"add" },
-      { label:"Owner discretionary & personal", val:35000, type:"add" },
-      { label:"Depreciation & amortization",   val:40000, type:"add" },
-      { label:"One-time / non-recurring",      val:25000, type:"add" }
+      { label:"Owner salary (add back)",          val:80000, type:"add" },
+      { label:"Consulting & optional services",   val:50000, type:"add" }
     ]
   },
   realEstate:{
-    price:2100000, capRate:0.0675,
+    price:2100000, capRate:0.06,
+    // The actual property — no storage units, no separate rental units (per Glenn 2026-07-30)
+    property:[
+      { label:"Site — prime Wears Valley Rd frontage", val:"1.39 ac" },
+      { label:"Upstairs office + 1-bdr apartment (owner/manager or rental)", val:"900 sf" }
+    ],
     rent:[
-      { label:"Restaurant space (market rent)", val:120000 },
-      { label:"Rental units (4)",               val:24000 },
-      { label:"Storage units",                  val:18000 }
+      { label:"Restaurant space (market rent)",           val:120000 },
+      { label:"Upstairs office & apartment (rental possibility)", val:16800 }
     ],
     opexRatio:0.11,
-    // Sales-comparison approach — ACTIVE Wears Valley Rd corridor listings (asking, mid-2026)
+    // Sales-comparison approach — ACTIVE COMMERCIAL Wears Valley Rd corridor listings (asking, mid-2026); residential excluded
     buildingSqft:5900,        // ⚠ ASSUMPTION — confirm Elvira's actual building SF
-    concludedPpsf:357,        // avg of two closest corridor comps
+    concludedPpsf:355,        // anchored on the closest commercial comp; corridor context runs higher
     landPerAcre:85000,        // Sevier County median (Land Network)
     comps:[
-      { addr:"3360 Wears Valley Rd", use:"Restaurant / retail + 2 apts", sqft:5080, acres:0.96, price:1800000, closest:true },
-      { addr:"3769–3771 Wears Valley Rd", use:"8-unit complex (renovated)", sqft:7200, acres:1.7, price:2600000, closest:true },
-      { addr:"1134–1138 Wears Valley Rd", use:"Commercial + acreage", sqft:4394, acres:6.95, price:1990000, closest:false }
+      { addr:"3360 Wears Valley Rd", use:"Restaurant / retail + upstairs apartments", sqft:5080, acres:0.96, price:1800000, closest:true },
+      { addr:"1134–1138 Wears Valley Rd", use:"Commercial buildings + acreage", sqft:4394, acres:6.95, price:1990000, closest:false }
     ]
   },
   business:{ price:1000000 },
-  upside:{ baseSde:368771, hoursFlowThrough:0.45, hoursRevPerPct:9790, alcMargin:0.75, alcNetFactor:0.82, foodBase:1369468 },
+  upside:{ baseSde:328771, hoursFlowThrough:0.45, hoursRevPerPct:9790, alcMargin:0.75, alcNetFactor:0.82, foodBase:1369468 },
   case:[
     { h:"You own the dirt.", p:"Land and building are included and separately financed. The buyer captures the real estate appreciation and stops paying someone else's rent — a hard asset backing the whole deal." },
-    { h:"It already works — and it's been fixed.", p:"Profitable every year, with prime cost pulled from 73% to ~65% between 2023 and 2025. The hard operational work is done; a buyer inherits a stabilized business, not a fixer-upper." },
+    { h:"It already works — and it's been fixed.", p:"Profitable every year, with prime cost pulled from 73% in 2023 to ~65% on the books — and roughly 55% once the owner's salary and consulting fees carried in labor are added back. The hard operational work is done; a buyer inherits a stabilized business, not a fixer-upper." },
     { h:"The upside is in the buyer's hands.", p:"Extended hours and alcohol are additive to an existing, staffed, branded location — not speculative expansion. Pull either lever and the multiple compresses fast." },
     { h:"A recognized name in a tourism engine.", p:"Wears Valley sits on the doorstep of the Great Smoky Mountains, the most-visited national park in America. Elvira's is an established brand in that flow of traffic." },
     { h:"Priced to be provable.", p:"Every number here traces to a documented method — income-approach real estate, SDE-multiple business. It underwrites cleanly for a lender and a buyer's accountant." }
@@ -655,7 +657,7 @@ const pct=(n,dp=1)=>(n*100).toFixed(dp)+'%';
 const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 function pmt(p,r,y){r=r/12;const n=y*12;return r===0?p/n:p*r/(1-Math.pow(1+r,-n));}
 
-function primeCost(){const p=DATA.pnl2025;return {cogs:p.cogs/p.revenue,labor:p.labor/p.revenue,prime:(p.cogs+p.labor)/p.revenue};}
+function primeCost(){const p=DATA.pnl2025;const adjLabor=p.labor-p.laborAddbacks;return {cogs:p.cogs/p.revenue,labor:adjLabor/p.revenue,prime:(p.cogs+adjLabor)/p.revenue,reported:(p.cogs+p.labor)/p.revenue};}
 function adjustedSde(){return DATA.bridge.reportedNet + DATA.bridge.steps.reduce((a,s)=>a+s.val,0);}
 function reNOI(){const re=DATA.realEstate;const gross=re.rent.reduce((a,r)=>a+r.val,0);return {gross,noi:gross*(1-re.opexRatio)};}
 function upsideSde(hoursPct,alcPct){
@@ -673,8 +675,8 @@ function renderKpis(){
   const prime23=DATA.years[0]; // 2023 for context
   const cards=[
     {k:'2025 Net Revenue',v:fmtK(last.revenue),d:'Actual · cafe operations',chip:(yoy>=0?'+':'')+pct(yoy)+' vs 2024',cls:yoy>=0?'up':'flat'},
-    {k:'Adjusted SDE',v:fmtK(adjustedSde()),d:'Owner cash flow · add-backs estimated',chip:pct(adjustedSde()/last.revenue,0)+' margin',cls:'up'},
-    {k:'Prime Cost',v:pct(pc.prime,0),d:'Food + labor · industry line is 65%',chip:'down from 73% in ’23',cls:'up'},
+    {k:'Adjusted SDE',v:fmtK(adjustedSde()),d:'Owner cash flow · salary & consulting added back',chip:pct(adjustedSde()/last.revenue,0)+' margin',cls:'up'},
+    {k:'Prime Cost',v:pct(pc.prime,0),d:'Food + labor, net of owner add-backs · industry line is 65%',chip:'down from 73% in ’23',cls:'up'},
     {k:'Real Estate Included',v:fmtK(DATA.realEstate.price),d:'Land & building — income-approach value',chip:'Hard asset',cls:'flat',re:true}
   ];
   $('#kpiGrid').innerHTML=cards.map(c=>`<div class="kpi ${c.re?'re':''}"><div class="k">${c.k}</div><div class="v">${c.v}</div><div class="d">${c.d} <span class="chip ${c.cls}">${c.chip}</span></div></div>`).join('');
@@ -756,7 +758,8 @@ function renderBridgeTable(){
 
 function renderAssetTables(){
   const re=DATA.realEstate, noi=reNOI();
-  let r=re.rent.map(x=>`<div class="drow"><span class="lbl">${x.label}</span><span class="val">${fmt(x.val)}<span class="pct">/yr</span></span></div>`).join('');
+  let r=re.property.map(p=>`<div class="drow"><span class="lbl">${p.label}</span><span class="val">${p.val}</span></div>`).join('');
+  r+=re.rent.map(x=>`<div class="drow"><span class="lbl">${x.label}</span><span class="val">${fmt(x.val)}<span class="pct">/yr</span></span></div>`).join('');
   r+=`<div class="drow"><span class="lbl">Gross scheduled rent</span><span class="val">${fmt(noi.gross)}</span></div>`;
   r+=`<div class="drow"><span class="lbl">Less operating expense (${pct(re.opexRatio,0)})</span><span class="val" style="color:var(--crit)">−${fmt(noi.gross*re.opexRatio)}</span></div>`;
   r+=`<div class="drow"><span class="lbl">Net operating income</span><span class="val">${fmt(noi.noi)}</span></div>`;
