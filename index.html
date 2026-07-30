@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex, nofollow" />
-<title>Elvira's Cafe — Confidential Offering Memorandum</title>
+<title>Confidential Offering Memorandum</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,500&family=Mulish:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -92,7 +92,8 @@ img{max-width:100%;display:block}
 #gate .card{position:relative;z-index:2;width:min(440px,100%);text-align:center}
 #gate .logo{width:210px;margin:0 auto 4px;filter:drop-shadow(0 2px 10px rgba(0,0,0,.12))}
 :root[data-theme="dark"] #gate .logo,@media(prefers-color-scheme:dark){#gate .logo{filter:brightness(0) invert(.92)}}
-#gate .kicker{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--accent-ink);margin-top:12px}
+#gate .kicker{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--accent-ink)}
+#gate .gate-title{font-family:"Fraunces",serif;font-size:clamp(1.7rem,5vw,2.1rem);font-weight:600;color:var(--tx);margin-top:14px;letter-spacing:-.01em}
 #gate p{color:var(--tx-2);font-size:.9rem;margin:22px auto 24px;line-height:1.55;max-width:34ch}
 #gate .field{display:flex;gap:8px;background:var(--surface);border:1px solid var(--line-strong);border-radius:4px;padding:6px;box-shadow:var(--shadow)}
 #gate input{flex:1;background:transparent;border:0;color:var(--tx);font-size:1rem;padding:10px 12px;font-family:"JetBrains Mono",monospace;letter-spacing:.14em}
@@ -313,8 +314,8 @@ svg text{font-family:"JetBrains Mono",monospace;fill:var(--tx-3)}
 <div id="gate">
   <div class="bg"></div><div class="veil"></div>
   <div class="card">
-    <img class="logo" src="assets/logo.png" alt="Elvira's Cafe" />
-    <div class="kicker">Confidential Offering Memorandum</div>
+    <div class="kicker">Private &amp; Confidential</div>
+    <div class="gate-title">Offering Memorandum</div>
     <p>Confidential financial information prepared for qualified buyers. Enter the access code to continue.</p>
     <form class="field" id="gateForm" autocomplete="off">
       <input id="pw" type="password" placeholder="Access code" aria-label="Access code" />
@@ -890,7 +891,7 @@ async function unlock(code){const t=DATA.meta.accessCodeSha256;if(t){if(await sh
 function initGate(){
   const f=$('#gateForm');
   f.addEventListener('submit',async e=>{e.preventDefault();
-    if(await unlock($('#pw').value)){document.body.classList.remove('locked');$('#gate').style.display='none';boot();}
+    if(await unlock($('#pw').value)){document.body.classList.remove('locked');$('#gate').style.display='none';document.title=DATA.meta.business+' — Confidential Offering Memorandum';boot();}
     else{$('#gateErr').textContent='Incorrect access code.';$('#pw').value='';$('#pw').focus();}});
   $('#pw').focus();
 }
